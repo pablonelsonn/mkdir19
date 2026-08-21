@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/Build/(.*)\\.wasm\\.gz",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/wasm"
+        },
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    },
+    {
+      "source": "/Build/(.*)\\.(js|data)\\.gz",
+      "headers": [
+        {
+          "key": "Content-Encoding",
+          "value": "gzip"
+        }
+      ]
+    }
+  ]
+}
